@@ -38,6 +38,7 @@
 ## Integrantes
 
     > Santa Cruz, Franco Agustín.
+    > Vivero Barrios, Oscar Eduardo.
     
 ## Documentación
     
