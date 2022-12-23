@@ -1,12 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somos Barro</title>
-</head>
-<body>
-    <h1>Testing aaaa</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="introduction-container">
+    <div class="logo animate__animated animate__fadeIn animate__delay-1s"><img src="{% static 'assets/logo.png' %}">
+    </div>
+    <div class="logo-desc animate__animated animate__fadeInUp animate__delay-1s">
+        <p>Construimos colectivamente a través del Arte</p>
+    </div>
+</section>
+<section class="slider-container">
+    <div class="titles ppal">Novedades</div>
+
+    <div class="container w-75">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="/media/carousel/img1.png" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block bg-dark opacity-75 rounded p-2">
+                        <h1>En el último encuentro hicimos pizzas caseras</h1>
+                        <h5> Luego cada niño y niña se llevó su pizza terminada </h5>
+                        <h5> para compartir con sus familias.</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="/media/carousel/img2.png" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block bg-dark opacity-75 rounded p-2">
+                        <h1>Visitamos al Jardín "Héroes Latinoamericanos"</h1>
+                        <h5>Llevamos a cabo una actividad de cerámica con los niños y niñas de dicha institución
+                        </h5>
+                        <h5>a quienes también les compartimos los orígenes y desarrollo de la cerámica en
+                            latinoamerica</h5>
+                        <h5>revalorizado lo nuestro, y lo ancestral.</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="/media/carousel/img3.png" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block bg-dark opacity-75 rounded p-2">
+                        <h1>MUSICA EN MOVIMIENTO</h1>
+                        <h5>Presentación de Barro Músical en Expo Sustentable</h5>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+        </div>
+    </div>
+
+</section>
+<section class="events-container">
+    <div class="titles ppal">Próximos Eventos</div>
+    <div class="event A">
+        <a href="#">Taller de Elaboración de Galletas | 01/08/2022</a>
+    </div>
+    <div class="event B">
+        <a href="#">Taller de Pintura Recreativa | 07/08/2022</a>
+    </div>
+    <div class="event C">
+        <a href="#">Taller de Cerámica | 22/08/2022</a>
+    </div>
+    <div class="event D">
+        <a href="#">Taller de Auto Maquillaje | 22/10/2022</a>
+    </div>
+
+    <div class="event btn"><a href="#">Ver calendario</a></div>
+</section>
+<section class="divisor-container">
+    <div class="__desc">
+        <a>Construimos colectivamente a través del Arte</a>
+        <a>promoviendo politicas de inclusión y ampliando</a>
+        <a>el acceso a la educación.</a>
+    </div>
+    <div class="__img"><img src="/static/assets/divisor.png"></div>
+
+</section>
+<section class="social-container">
+    <div class="titles scnd">Nuestras Redes</div>
+    <div class="social">
+        <div class="__fb"><a href="https://www.facebook.com/fundacionsomosbarro"><img
+                    src="/static/assets/facebookicon.png"></a></div>
+        <div class="__ig"><a href="https://www.instagram.com/fundacionsomosbarro/"><img
+                    src="/static/assets/instagramicon.png"></a></div>
+    </div>
+</section>
+<section class="noticias-container">
+    <div class="titles ppal">Noticias</div>
+
+    <div class="index-noti-container">
+        <div class="card-group">
+            <div class="card m-2 d-flex justify-content-center">
+                <img class="card-img-top" src="/media/noticias/noti1.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">6to lugar entre 80 ONG's de la provincia</h5>
+                    <p class="card-text">Queremos agradecer a @sub.participacion_ciudadana , al Ministerio de
+                        @desarrollosocialchaco por la iniciativa de reconocer el labor solidario de las ONG's de
+                        la provincia</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 6 mins ago</small>
+                </div>
+            </div>
+            <div class="card m-2 d-flex justify-content-center">
+                <img class="card-img-top" src="/media/noticias/noti2.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Pintura y Macrame</h5>
+                    <p class="card-text">Se realizó otro encuentro en el taller de pintura y macrame</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 hours ago</small>
+                </div>
+            </div>
+            <div class="card m-2 d-flex justify-content-center ">
+                <img class="card-img-top" src="/media/noticias/noti3.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Visita de estudiantes de la carrera de Psicopedagogia</h5>
+                    <p class="card-text">Agradecemos la visita de estudiantes de la carrera de Psicopedagogia
+                        del Instituto Cernnea quienes se acercaron a la Fundación a conocer el trabajo que
+                        realizamos</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 7 hours ago</small>
+                </div>
+            </div>
+        </div>
+        <div class="card-group">
+            <div class="card m-2 d-flex justify-content-center">
+                <img class="card-img-top" src="/media/noticias/noti4.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Talleres Artisticos!</h5>
+                    <p class="card-text">En este encuentro brindamos dos talleres con actividades diferenciadas
+                        en simultaneo, uno destinado a niños y niñas que están en proyecto de crear llamadores
+                        de ángeles en cerámica. Y el otra a los y las adolescentes quienes comenzaron a aprender
+                        puntos de macrame</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 1 day ago</small>
+                </div>
+            </div>
+            <div class="card m-2 d-flex justify-content-center">
+                <img class="card-img-top" src="/media/noticias/noti5.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Taller de Arte Integrador!</h5>
+                    <p class="card-text">Compartimos un taller Integrador en donde aprendimos a través de la
+                        música, las rimas, la literatura y la pintura un poco más sobre nuestra flora, y nuestra
+                        cultura.
+                        @paulabelizansaban nos trajo la leyenda Guaraní del Jacaranda, en donde reflexionamos
+                        acerca de lo trágico que puede llegar a ser la discriminación, pero también sobre fuerza
+                        del amor.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 days ago</small>
+                </div>
+            </div>
+            <div class="card m-2 d-flex justify-content-center">
+                <img class="card-img-top" src="/media/noticias/noti6.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Festival de las Infancias</h5>
+                    <p class="card-text">El domingo 25 de septiembre estuvimos compartiendo nuestro trabajo y
+                        pasando una hermosa tarde artitistica en El Festival de las Infancias</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 1 week ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

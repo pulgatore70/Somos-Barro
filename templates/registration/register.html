@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="registro">
+
+    <div class="titles">
+        <a class="titles scnd">CREA una cuenta</a>
+    </div>
+
+    <div class="form-container">
+        <form class="form-signin" method="post">
+            {% csrf_token %}
+            <div id="form-part">
+                <p>
+                    <input type="text" name="username" id="id_username" class="form-control" placeholder="Username"
+                        required>
+                </p>
+                <p>
+                    <input type="email" name="email" id="id_email" class="form-control" placeholder="Email" required
+                        autofocus>
+                </p>
+                <p>
+                    <input type="password" name="password1" id="id_password" class="form-control"
+                        placeholder="Contraseña" required>
+                </p>
+                <p>
+                    <input type="password" name="password2" id="id_password_confirmation" class="form-control"
+                        placeholder="Repetir contraseña" required>
+                </p>
+            </div>
+
+            <div class="regbtn-container">
+                <button class="reg-button" type="submit">Registrarse</button>
+            </div>
+            {% if form.errors %}
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </form>
+
+        <div class="log">
+            <p>Ya tienes una cuenta? <a href="./login.html"> Inicia sesión aquí</a></p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

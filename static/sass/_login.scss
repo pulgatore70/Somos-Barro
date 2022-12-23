@@ -1,0 +1,78 @@
+.registro {
+    & .form-container {
+        width: 70%;
+        margin: 0 auto 2rem;
+        background-color: whitesmoke;
+
+        border: {
+            top: 2px solid $ppal-color;
+            bottom: 2px solid $ppal-color;
+            radius: 0.5rem;
+        };
+
+        & #form-part {
+            padding: 2rem;
+
+            & p {
+                display: flex;
+                justify-content: center;
+
+                & input {
+                    text-align: center;
+                    background-color: transparent;
+                    color: $sdo-color;
+                    border: {
+                        bottom: 1px solid $ppal-color;
+                        radius: 0.5rem;
+                    };
+                    margin: 0.3rem;
+                    transition: all 1s;
+
+                    &::placeholder {
+                        color: $ppal-color;
+                    }
+
+                    &:focus {
+                        border: 2px solid $ppal-color;
+                    }
+                }
+            }
+        }
+
+        & #conditions-part {
+            padding: 0rem 2rem;
+            & a {
+                color: $sdo-color;
+                display: flex;
+                justify-content: left;
+                font-size: 0.7rem;
+            }
+        }
+        & .regbtn-container{
+            padding-top: 1rem;
+            display: flex;
+            justify-content: center;
+            & .reg-button{
+                padding: 0.2rem 0.6rem;
+                border: 1px solid $ppal-color;
+                border: {
+                    radius: 0.2rem;
+                }
+                color: $ppal-color;
+                background-color: transparent;
+                transition: all 1s;
+
+                &:hover{
+                    background-color: $sdo-color;
+                }
+            }
+        }
+        & .log{
+            display: flex;
+            justify-content: center;
+            color: $ppal-color;
+            font-size: 0.6rem;
+            margin-top: 1rem;
+        }
+    }
+}

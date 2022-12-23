@@ -1,0 +1,67 @@
+header {
+    & .nav-container {
+        height: 8rem
+    }
+
+    .custom-shape-divider-top-1671319251 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: 10;
+        & svg {
+            position: relative;
+            display: block;
+            width: calc(142% + 1.3px);
+            height: 100px;
+            transform: rotateY(180deg);
+        }
+        & .shape-fill {
+            fill: #FFFFFF;
+        }
+    }
+
+    & .routes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: absolute;
+        z-index: 15;
+        width: 100%;
+        & .__left{
+            display: flex;
+            font-size: $ppal-font;
+            justify-content: flex-end;
+
+            margin: {
+                right: 5.5rem;
+                top: .8rem;
+            };
+
+            & a{
+                margin-left: 3rem;
+                color: $ppal-color;
+                font-weight: bold;
+                padding: 0.2rem;
+                transition: all 1s;
+                &:hover{
+                    color: $sdo-color;
+                    border-left: 1px solid $sdo-color;
+                    border-right: 1px solid $sdo-color;
+                    border-radius: .5rem;
+                }
+            }
+        }
+        & .__right{
+            display: flex;
+            justify-self: right;
+            font-size: $sdo-font;
+            margin-top: .5rem;
+            & a{
+                margin-right: 2rem;
+                color: $ppal-color;
+            }
+        }
+    }
+}
